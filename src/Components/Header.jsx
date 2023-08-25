@@ -51,17 +51,17 @@ export default function Header() {
     }
 
     return (
-        <div className={`flex justify-between items-center w-full h-20 px-6 relative top-0 ${scrollBg ? 'bg-purple-100' : 'bg-white'} transition duration-300`}>
+        <div className={`flex  justify-between items-center w-full h-20 px-6 fixed z-50 top-0 ${scrollBg ? 'bg-purple-100' : 'bg-white'} transition duration-300`}>
 
             <nav>
-                <div onClick={onNavClick} className="flex mt-7 fixed top-0 z-50 text-gray-500 cursor-pointer">
+                <div onClick={onNavClick} className="flex mt-6 fixed top-0 z-50 text-gray-500 cursor-pointer">
                     <img src={menu} alt="Menu" width={30} height={30} />
                 </div>
 
                 {navBar &&
-                    <ul className=" h-[100vh] w-[50vh] fixed top-0 z-50 text-white left-0 bg-gradient-to-b from-purple-800 to-purple-950">
+                    <ul className=" h-[100vh] w-[50vh] fixed top-0 z-50 text-white left-0 bg-gradient-to-b from-purple-800 to-purple-950 opacity-95">
                         
-                        <div onClick={onNavClick} className="flex mt-7 fixed top-0 px-6 z-50 text-gray-500 cursor-pointer">
+                        <div onClick={onNavClick} className="flex mt-6 fixed top-0 px-6 z-50 text-gray-500 cursor-pointer">
                             <img src={menuback} width={30} height={30} alt="back menu" />
                         </div>
                         
