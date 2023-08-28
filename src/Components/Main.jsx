@@ -19,7 +19,7 @@ export default function Main() {
             title: "Style",
             paragraph:" Empire Waist",
             image: dress1,
-            style:"hover:scale-110 rounded-md transition-all hover:bg-yellow-800 duration-500",
+            style:"hover:scale-110 transition-all rounded-3xl hover:bg-yellow-700 duration-500",
 
         },
         {
@@ -27,14 +27,14 @@ export default function Main() {
             title: "Style",
             paragraph:"Assessories yourself",
             image: dress2,
-            style:"hover:scale-110 rounded-md transition-all hover:bg-blue-950 duration-500",
+            style:"hover:scale-110 transition-all rounded-3xl hover:bg-blue-700 duration-500",
         },
         {
             id: 4,
             title: "Style",
             paragraph:"Trendy Jackets",
             image: dress3,
-            style:"hover:scale-110 transition-all rounded-md hover:bg-red-950 duration-500"
+            style:"hover:scale-110 transition-all rounded-3xl hover:bg-red-700 duration-500"
 
         },
     ]
@@ -50,7 +50,7 @@ export default function Main() {
                 <img src={Girl} className="w-[100vh]  object-contain" alt="Shopping" />
             </div>
 
-            <div className="flex justify-around w-1/2 h-1/3 bg-gray-200 rounded-3xl absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-11 bg-gradient-to-r from-gray-300 to-purple-500 text-white ">
+            <div className="flex justify-around w-1/2 h-1/3 bg-gray-200 rounded-3xl absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-10 bg-gradient-to-r from-gray-300 to-purple-500 text-white ">
 
                 {boxes.map(({ id, title, paragraph, image, style }, index) => (
                     <div key={id} className={`h-full ml-14 w-1/4 float-left p-4 ${style}`}>
@@ -58,11 +58,11 @@ export default function Main() {
                             <>
                                 <img className="mt-5 w-16" src={image} alt="" />
                                 <p className="flex mt-8 text-sm max-w-0 ">{paragraph}</p>
-                                <button className="text-xs mt-2 hover:underline rounded-full">Shop Now +</button>
+                                <button className="text-xs mt-2 hover:underline">Shop Now +</button>
                             </>
                         ) : (
                             <>
-                                <p>Shop Your Favourite stores now </p>
+                                <p className="">Shop Your Favourite stores now </p>
                                 
                             </>
                         )}
