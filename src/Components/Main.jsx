@@ -3,6 +3,8 @@ import Girl from "../Components/Images/Girl.png"
 import dress1 from "../Components/Images/dress1.png"
 import dress2 from "../Components/Images/dress2.png"
 import dress3 from "../Components/Images/dress3.png"
+import Slider from "./Slider";
+import Packages from "./Packages";
 
 export default function Main() {
     const boxes = [
@@ -39,6 +41,7 @@ export default function Main() {
         },
     ]
     return (
+        <>
         <div className="mt-16 flex relative justify-around p-5">
             <div className="w-1/2 bg-blue-20 mx-16 p-10 mt-20 relative">
                 <div className="absolute w-44 h-40 bg-purple-50 rounded-full"></div>
@@ -71,5 +74,8 @@ export default function Main() {
 
             </div>
         </div>
+            <Slider/>
+            <Packages/>
+            </>
     )
 }

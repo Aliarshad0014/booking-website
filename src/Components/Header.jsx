@@ -4,24 +4,26 @@ import Cart from "../Components/Images/Cart.png";
 import Profile from "../Components/Images/user.png";
 import menu from "../Components/Images/menu.png";
 import menuback from "../Components/Images/menuback.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const nav = [
         {
             id: 1,
-            Link: "Dresses",
+            link: "Dresses",
+            path: "/dresses",
         },
         {
             id: 2,
-            Link: "Accessories",
+            link: "Accessories",
         },
         {
             id: 3,
-            Link: "Winter",
+            link: "Winter",
         },
         {
             id: 4,
-            Link: "Contact Us",
+            link: "Contact Us",
         },
     ];
 
@@ -66,14 +68,14 @@ export default function Header() {
                         </div>
                         
                         <div className=" flex mt-20 ml-6 lex flex-col justify-start items-baseline">
-                            {nav.map(({ Link, id }) => (
+                            {nav.map(({ link, id,path }) => (
 
-                                <button
+                                <Link to={path}
                                     key={id}
                                     className=" hover:scale-105 my-2  hover:text-gray-950 hover:border-purple-500 hover:bg-gray-100 rounded-md p-2  transition-all"
                                 >
-                                    {Link}
-                                </button>
+                                    {link}
+                                </Link >
                             ))}
                         </div>
 
